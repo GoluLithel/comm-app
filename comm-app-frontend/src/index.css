@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  background: #eef1f8;
+  color: #232842;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+input, button, select, textarea { font-family: inherit; }
+input::placeholder { color: #a6abc4; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-thumb {
+  background: #d6d9e8;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+#root { min-height: 100vh; }

@@ -1,0 +1,30 @@
+.btn-primary:hover    { background: #4338ca !important; }
+.btn-outline:hover    { background: #f6f7fb !important; }
+.btn-edit:hover       { background: #f4f5fd !important; }
+.btn-danger:hover     { background: #fdf1f1 !important; }
+.btn-delete:hover     { background: #d23b40 !important; }
+.btn-logout:hover     { background: #fdf1f1 !important; color: #e5484d !important; border-color: #f4d4d6 !important; }
+.btn-ghost-indigo:hover { background: #eef0fc !important; }
+.btn-back:hover       { color: #4f46e5 !important; }
+.btn-create-account:hover { background: #f6f7fd !important; }
+
+.card-hover { transition: border-color .15s ease, transform .15s ease; }
+.card-hover:hover { border-color: #c9cdf0 !important; transform: translateY(-2px) !important; }
+.card-hover-green:hover { border-color: #a8e6d4 !important; transform: translateY(-2px) !important; }
+.card-hover-amber:hover { border-color: #f3d9b3 !important; transform: translateY(-2px) !important; }
+
+.input-field { transition: border-color .15s ease, background .15s ease; }
+.input-field:focus { border-color: #4f46e5 !important; background: #fff !important; }
+
+.nav-tab { transition: background .15s, color .15s; }
+
+@keyframes pop {
+  from { opacity: 0; transform: translateY(10px) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes backdrop { from { opacity: 0; } to { opacity: 1; } }
+
+.anim-pop { animation: pop .25s ease both; }
+.anim-fade { animation: fade .2s ease both; }
+.anim-backdrop { animation: backdrop .2s ease both; }
