@@ -1,11 +1,16 @@
+import { useLocation, useNavigate } from 'react-router-dom'
 import { avStyle, initials, tabStyle } from '../utils/helpers'
 
-export default function Header({ currentUser, view, onNavHome, onNavChat, onNavUsers, onNavDocs, onLogout }) {
+export default function Header({ currentUser, onLogout }) {
   const cu = currentUser || { name: '', email: '' }
+  const navigate = useNavigate()
+  const { pathname } = useLocation()
+  const isActive = (path) => pathname === path || pathname.startsWith(path + '/')
+
   return (
     <header style={{ position: 'sticky', top: 0, zIndex: 20, background: '#f4f6fb', borderBottom: '1px solid #e6e8f3' }}>
       <div style={{ maxWidth: 1120, margin: '0 auto', padding: '11px 18px', display: 'flex', alignItems: 'center', gap: 14, flexWrap: 'wrap' }}>
-        <div onClick={onNavHome} style={{ display: 'flex', alignItems: 'center', gap: 9, cursor: 'pointer', flex: '0 0 auto' }}>
+        <div onClick={() => navigate('/')} style={{ display: 'flex', alignItems: 'center', gap: 9, cursor: 'pointer', flex: '0 0 auto' }}>
           <div
             style={{
               width: 34,
@@ -38,13 +43,13 @@ export default function Header({ currentUser, view, onNavHome, onNavChat, onNavU
             width: '100%',
           }}
         >
-          <button className="nav-tab" onClick={onNavChat} style={tabStyle(view === 'chat')}>
+          <button className="nav-tab" onClick={() => navigate('/chat')} style={tabStyle(isActive('/chat'))}>
             Group Chat
           </button>
-          <button className="nav-tab" onClick={onNavUsers} style={tabStyle(view === 'users')}>
+          <button className="nav-tab" onClick={() => navigate('/users')} style={tabStyle(isActive('/users'))}>
             Manage Users
           </button>
-          <button className="nav-tab" onClick={onNavDocs} style={tabStyle(view === 'documents')}>
+          <button className="nav-tab" onClick={() => navigate('/documents')} style={tabStyle(isActive('/documents'))}>
             Manage Documents
           </button>
         </nav>

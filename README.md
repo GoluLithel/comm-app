@@ -3,7 +3,7 @@
 A small full-stack communication app: chat rooms/messages, user management, and
 document upload & sharing. Built as a learning/casual project.
 
-- **Frontend** — React (Vite SPA), state-driven navigation (no router)
+- **Frontend** — React (Vite SPA), client-side routing via React Router
 - **Backend** — NestJS REST API
 - **Database** — PostgreSQL (TypeORM migrations + seed data)
 - **Orchestration** — Docker Compose (db + backend + frontend)

@@ -6,6 +6,8 @@
 
 # Dependencies
 node_modules/
+comm-app-reactjs-fe
+comm-app-nodejs-be
 
 # Logs
 logs

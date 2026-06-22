@@ -27,26 +27,12 @@ import EditUserModal from './components/modals/EditUserModal'
 import EditDocModal from './components/modals/EditDocModal'
 import UploadModal from './components/modals/UploadModal'
 
-// Workaround: persist the logged-in user so a page refresh doesn't log them
-// out. There's no token-based auth yet, so we just stash the user object.
-const AUTH_STORAGE_KEY = 'commapp.currentUser'
-
-function loadStoredUser() {
-  try {
-    const raw = localStorage.getItem(AUTH_STORAGE_KEY)
-    return raw ? JSON.parse(raw) : null
-  } catch {
-    return null
-  }
-}
-
 export default function App() {
-  const storedUser = loadStoredUser()
-  const [authed, setAuthed] = useState(Boolean(storedUser))
+  const [authed, setAuthed] = useState(false)
   const [view, setView] = useState('home')
   const [guestScreen, setGuestScreen] = useState('welcome')
   const [loggedOut, setLoggedOut] = useState(false)
-  const [currentUser, setCurrentUser] = useState(storedUser)
+  const [currentUser, setCurrentUser] = useState(null)
 
   const [users, setUsers] = useState([])
   const [messages, setMessages] = useState([])
@@ -118,21 +104,9 @@ export default function App() {
 
   // refresh data whenever currentUser changes
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     if (currentUser) loadAll(currentUser)
   }, [currentUser, loadAll])
-
-  // keep the persisted user in sync (covers login, logout, and profile edits)
-  useEffect(() => {
-    try {
-      if (currentUser) {
-        localStorage.setItem(AUTH_STORAGE_KEY, JSON.stringify(currentUser))
-      } else {
-        localStorage.removeItem(AUTH_STORAGE_KEY)
-      }
-    } catch {
-      // ignore storage errors (private mode, quota, etc.)
-    }
-  }, [currentUser])
 
   // auto-scroll chat
   useEffect(() => {
