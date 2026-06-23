@@ -17,20 +17,15 @@ export function acolors(seed) {
   return PALETTE[h % PALETTE.length]
 }
 
+// Returns ONLY dynamic style — layout lives in the `.avatar` CSS class.
 export function avStyle(seed, size, fs) {
   const [bg, fg] = acolors(seed)
   return {
     width: size + 'px',
     height: size + 'px',
-    borderRadius: '50%',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: 800,
     fontSize: fs + 'px',
     background: bg,
     color: fg,
-    flex: '0 0 auto',
   }
 }
 
@@ -39,24 +34,12 @@ export function fmeta(file) {
   return FILE_TYPES[ext] || ['FILE', '#64748b', '#eef1f6']
 }
 
+// Layout lives in the `.file-badge` CSS class; only colors are dynamic.
 export function fileBadge(file) {
   const [label, fg, bg] = fmeta(file)
   return {
     ext: label,
-    style: {
-      width: '46px',
-      height: '46px',
-      borderRadius: '13px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      fontWeight: 800,
-      fontSize: '11.5px',
-      letterSpacing: '.03em',
-      background: bg,
-      color: fg,
-      flex: '0 0 auto',
-    },
+    style: { background: bg, color: fg },
   }
 }
 
@@ -73,19 +56,4 @@ export function nameFromEmail(e) {
 export function nowTime() {
   const d = new Date()
   return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0')
-}
-
-export function tabStyle(active) {
-  return {
-    padding: '9px 17px',
-    borderRadius: '999px',
-    border: 'none',
-    background: active ? '#4f46e5' : 'transparent',
-    color: active ? '#fff' : '#5b6180',
-    fontWeight: 700,
-    fontSize: '14px',
-    cursor: 'pointer',
-    whiteSpace: 'nowrap',
-    flex: '0 0 auto',
-  }
 }

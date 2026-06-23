@@ -1,0 +1,88 @@
+.home-hero {
+  background: linear-gradient(135deg, #4f46e5 0%, #6d63ec 100%);
+  border-radius: 26px;
+  padding: 34px 32px;
+  color: #fff;
+  box-shadow: 0 26px 54px -28px rgba(79, 70, 229, 0.75);
+}
+
+.home-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.home-hero__title {
+  margin: 0 0 6px;
+  font-size: 29px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.home-hero__email {
+  margin: 0;
+  opacity: 0.92;
+  font-size: 15px;
+}
+
+.home-cards {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+  gap: 16px;
+}
+
+.home-card {
+  text-align: left;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #e8eaf3;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.home-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.home-card__icon--chat {
+  background: #e7e9fe;
+  color: #4f46e5;
+}
+
+.home-card__icon--users {
+  background: #d8f3ec;
+  color: #0f9d75;
+}
+
+.home-card__icon--docs {
+  background: #fdeede;
+  color: #d97706;
+}
+
+.home-card__title {
+  font-size: 16.5px;
+  font-weight: 800;
+}
+
+.home-card__subtitle {
+  font-size: 13.5px;
+  color: #8a90ab;
+  margin-top: 3px;
+}

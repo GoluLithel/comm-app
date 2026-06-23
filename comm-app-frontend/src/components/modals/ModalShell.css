@@ -1,0 +1,125 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(22, 24, 44, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-panel {
+  width: 100%;
+  max-width: 440px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 32px 80px -28px rgba(20, 22, 50, 0.55);
+  padding: 26px;
+}
+
+.modal-danger-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: #fde7ea;
+  color: #e5484d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 16px;
+}
+
+.modal-title {
+  margin: 0 0 7px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.modal-title--no-icon {
+  margin: 0 0 18px;
+}
+
+.modal-body {
+  margin: 0 0 22px;
+  color: #767c99;
+  font-size: 14.5px;
+  line-height: 1.55;
+}
+
+.modal-body__strong {
+  color: #232842;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.modal-field {
+  margin-bottom: 15px;
+}
+
+.modal-field--last {
+  margin-bottom: 22px;
+}
+
+.modal-field--gap-sm {
+  margin-bottom: 16px;
+}
+
+.modal-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3a4063;
+  margin: 0 0 7px;
+}
+
+.modal-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e3e5f1;
+  background: #fafbff;
+  font-size: 14.5px;
+  color: #232842;
+  outline: none;
+}
+
+.modal-btn-cancel {
+  padding: 11px 18px;
+  border-radius: 12px;
+  border: 1.5px solid #e6e8f3;
+  background: #fff;
+  color: #5b6180;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-btn-delete {
+  padding: 11px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #e5484d;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.modal-btn-save {
+  padding: 11px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}

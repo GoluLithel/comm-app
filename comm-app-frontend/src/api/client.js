@@ -1,37 +1,38 @@
+import axios from 'axios'
+
 const BASE = import.meta.env.VITE_API_BASE || '/api'
 
-async function request(path, options = {}) {
-  const res = await fetch(`${BASE}${path}`, {
-    headers: {
-      'Content-Type': 'application/json',
-      ...(options.headers || {}),
-    },
-    ...options,
-  })
+const instance = axios.create({
+  baseURL: BASE,
+  headers: { 'Content-Type': 'application/json' },
+})
 
-  if (!res.ok) {
-    let body
-    try {
-      body = await res.json()
-    } catch {
-      body = null
-    }
+// Normalize errors so callers can keep reading `err.status`, `err.body`, and `err.message`.
+instance.interceptors.response.use(
+  (res) => res,
+  (error) => {
+    const status = error.response?.status
+    const body = error.response?.data ?? null
     const message =
       (body && (Array.isArray(body.message) ? body.message.join(', ') : body.message)) ||
-      res.statusText
+      error.message ||
+      'Request failed'
     const err = new Error(message)
-    err.status = res.status
+    err.status = status
     err.body = body
-    throw err
-  }
+    return Promise.reject(err)
+  },
+)
 
+async function request(method, path, body) {
+  const res = await instance.request({ method, url: path, data: body })
   if (res.status === 204) return null
-  return res.json()
+  return res.data
 }
 
 export const api = {
-  get: (path) => request(path),
-  post: (path, body) => request(path, { method: 'POST', body: JSON.stringify(body) }),
-  patch: (path, body) => request(path, { method: 'PATCH', body: JSON.stringify(body) }),
-  delete: (path) => request(path, { method: 'DELETE' }),
+  get: (path) => request('get', path),
+  post: (path, body) => request('post', path, body),
+  patch: (path, body) => request('patch', path, body),
+  delete: (path) => request('delete', path),
 }

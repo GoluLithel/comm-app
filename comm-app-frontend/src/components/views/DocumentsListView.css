@@ -1,0 +1,139 @@
+.docs-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 4px 2px 14px;
+}
+
+.docs-header__title {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.docs-header__add-btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.docs-section-title {
+  margin: 30px 2px 14px;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.doc-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #e8eaf3;
+  border-radius: 18px;
+  padding: 14px 18px;
+}
+
+.doc-row__main {
+  flex: 1 1 190px;
+  min-width: 0;
+}
+
+.doc-row__label {
+  font-weight: 800;
+  font-size: 15.5px;
+}
+
+.doc-row__file {
+  font-size: 13px;
+  color: #8a90ab;
+  margin-top: 2px;
+}
+
+.doc-row__share-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7196;
+  background: #f1f2fa;
+  padding: 5px 11px;
+  border-radius: 999px;
+}
+
+.doc-row__actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.doc-row__btn-edit {
+  padding: 9px 15px;
+  border-radius: 11px;
+  border: 1.5px solid #e3e5f1;
+  background: #fff;
+  color: #4f46e5;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.doc-row__btn-delete {
+  padding: 9px 15px;
+  border-radius: 11px;
+  border: 1.5px solid #f3dadb;
+  background: #fff;
+  color: #e5484d;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+}
+
+.doc-row__shared-by {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.doc-row__shared-by-meta {
+  line-height: 1.2;
+}
+
+.doc-row__shared-by-label {
+  font-size: 11px;
+  color: #a0a6c0;
+  font-weight: 700;
+}
+
+.doc-row__shared-by-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a5072;
+}
+
+.file-badge {
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  flex: 0 0 auto;
+}

@@ -1,0 +1,130 @@
+.share-back {
+  background: none;
+  border: none;
+  color: #8a90ab;
+  font-weight: 700;
+  font-size: 13.5px;
+  cursor: pointer;
+  padding: 2px 0;
+  margin: 0 0 8px;
+}
+
+.share-head {
+  margin: 6px 0 20px;
+}
+
+.share-head__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.share-head__file {
+  margin: 6px 0 0;
+  color: #767c99;
+  font-size: 14.5px;
+}
+
+.share-section-title {
+  margin: 0 2px 12px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #4a5072;
+}
+
+.share-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 26px;
+}
+
+.share-row {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid #e8eaf3;
+  border-radius: 16px;
+  padding: 12px 16px;
+}
+
+.share-row__main {
+  flex: 1 1 170px;
+  min-width: 0;
+}
+
+.share-row__name {
+  font-weight: 800;
+  font-size: 14.5px;
+}
+
+.share-row__email {
+  font-size: 12.5px;
+  color: #8a90ab;
+}
+
+.share-row__btn-remove {
+  padding: 8px 15px;
+  border-radius: 11px;
+  border: 1.5px solid #f3dadb;
+  background: #fff;
+  color: #e5484d;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.share-empty {
+  background: #fff;
+  border: 1px dashed #d9dceb;
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  color: #8a90ab;
+  font-size: 14px;
+  margin-bottom: 26px;
+}
+
+.share-add-card {
+  background: #fff;
+  border: 1px solid #e8eaf3;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.share-add-card__select {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e3e5f1;
+  background: #fafbff;
+  font-size: 14.5px;
+  color: #232842;
+  outline: none;
+  cursor: pointer;
+}
+
+.share-add-card__btn {
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: none;
+  background: #4f46e5;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
+.share-no-candidates {
+  margin: 12px 2px 0;
+  color: #a0a6c0;
+  font-size: 13px;
+}
